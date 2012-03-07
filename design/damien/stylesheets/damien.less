@@ -1,0 +1,372 @@
+// FONTS ////////////////////////////////////////////////////////////
+
+@font-face {
+    font-family: 'ThatsFontFolksItalic';
+    src: url('../images/fonts/that_s_font_folks-webfont.eot');
+    src: url('../images/fonts/that_s_font_folks-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../images/fonts/that_s_font_folks-webfont.woff') format('woff'),
+         url('../images/fonts/that_s_font_folks-webfont.ttf') format('truetype'),
+         url('../images/fonts/that_s_font_folks-webfont.svg#ThatsFontFolksItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+// COULEURS /////////////////////////////////////////////////////////
+
+@fond:          #FEE7F0;    // Cuisse de nymphe
+
+@bg-texte:      #FEFEFE;    // Neige
+@fg-texte:      #303030;    // Anthracite
+
+@fg-lettrine:   #997A8D;    // Rose Mounbatten
+
+@fg-lien:       #DE3163;    // Cerise
+
+@fg-emphase:    #997A8D;    // Rose Mounbatten
+
+@fg-citation:   #F400A1;    // Hollywood
+
+@fg-titre-1:    #A10684;    // Violine
+
+@bg-header:     #000000;    // Noir
+@fg-header:     #FFFFFF;    // Blanc
+
+@bg-menu:       #000000;    // Noir
+@fg-menu:       #FFFFFF;    // Blanc
+
+@bg-barre:      lighten(@fg-texte, 70%);
+
+@bg-code:       lighten(@fond, 4%);
+
+// FONCTIONS ////////////////////////////////////////////////////////
+
+.shadow(@taille: 5px)
+{
+
+    @taille2 = @taille / 2;
+
+    -webkit-box-shadow: 0px 2px @taille @taille2 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 2px @taille @taille2 rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 2px @taille @taille2 rgba(0, 0, 0, 0.5);     
+}
+
+.colonnage(@nombre: 2)
+{
+    text-align: justify;
+    columns: @nombre;
+    column-gap: 2em;
+    -moz-columns: @nombre;
+    -moz-column-gap: 2em;
+    -webkit-columns: @nombre;
+    -webkit-column-gap: 2em;
+}
+
+// CSS //////////////////////////////////////////////////////////////
+
+
+html
+{
+
+    font-size: 14px;
+    background: @fond url(../images/background.jpg);
+    background-position: top center;
+    background-attachment: fixed;
+    
+    color: @fg-texte;
+
+    #main
+    {
+
+        article, side
+        {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        margin-top: 20px;
+        margin-bottom: 40px;
+        background-color: @bg-texte;
+        background-image: url(../images/background-side.png);
+        background-position: top right;
+        background-repeat: repeat-y;
+        .shadow(4px);
+        border-radius: 5px 5px 0px 0px;
+
+        a
+        {
+
+            text-decoration: none;
+
+            color: @fg-lien;
+            &:hover
+            {
+                color: saturate(lighten(@fg-lien, 20%), 20%);
+            }
+        }
+
+        b
+        {
+            color: @fg-emphase;
+            font-weight: bold;
+        }
+
+        p
+        {
+            text-align: justify;
+            color: @fg-texte;
+        }
+
+        .lettrine:first-letter
+        {
+            float: left;
+            margin: 2px;
+            font-size: 4em;
+            font-weight: normal;
+            font-family: FerricaLight;
+            color: @fg-lettrine;
+        }
+
+        pre
+        {
+            font-size: 0.8em;
+            padding: 10px;
+            border: 1px @fg-emphase solid;
+            background-color: @bg-code;
+        }
+
+        hr
+        {
+            color: @bg-barre;
+            background-color: @bg-barre;
+            height: 1px;
+        }
+
+        h1, h2
+        {
+            font-family: ThatsFontFolksItalic;
+            font-weight: normal;
+        }
+
+        h2, h3, h4, h5
+        {
+            font-weight: normal;
+        }
+
+        h1
+        {
+            font-size: 4em;
+            &:first-letter
+            {
+                font-size: 1.1em;
+            }
+        }
+
+        h2
+        {
+            font-size: 2em;
+        }
+
+        #header
+        {
+
+            background-color: @bg-header;
+            color: @fg-header;
+            font-family: ThatsFontFolksItalic;
+            padding: 10px 30px 20px 0px;
+            font-size: 30px;
+            text-align: right;
+            text-shadow: 0px 0px 6px rgba(255, 145, 207, 1);
+
+            span
+            {
+                display: block;
+                font-family: helvetica;
+                font-size: 16px;
+                line-height: 0px;
+            }
+
+        }
+
+        #menu
+        {
+
+            background-color: @bg-menu;
+            color: @fg-menu;
+
+            ul
+            {
+                li
+                {
+
+                    display: inline;
+
+                    a
+                    {
+                        
+                        background-color: @bg-menu;
+                        border-radius: 0px;
+                        padding: 10px;
+                        margin-right: 10px;
+
+                        &:hover
+                        {
+                            -moz-transition: background-color 0.2s ease-in-out;
+                            //-moz-transition: color 0.2s ease-in-out;
+                            //-moz-transition: border-radius 0.2s ease-in-out;
+                            border-radius: 0px 15px 0px 15px;
+                            background-color: @fg-lien;
+                            color: #fff;
+                        }
+
+                        &.inside
+                        {
+                            border-radius: 0px 15px 0px 15px;
+                            background-color: #333333;
+                            color: #fff;
+                        }
+
+                    }
+
+                }
+            }
+
+        }
+
+        #article
+        {
+
+            background-color: @bg-texte;
+            line-height: 1.7em;
+            padding: 20px;
+
+            .colonnes
+            {
+                .colonnage;
+            }
+
+            .citation
+            {
+                display: block;
+                font-family: ThatsFontFolksItalic;
+                font-size: 1.7em;
+                font-weight: normal;
+                text-align: center;
+                padding: 30px 20px 30px 20px;
+                color: @fg-citation;
+                font-style: italic;
+                background-image: url(../images/quotes.png);
+                background-position: 0px 20px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-size: auto;
+            }
+
+        }
+
+        #side
+        {
+
+            width: 280px;
+            background-image: url(../images/side-haut.png);
+            background-position: left bottom;
+            background-repeat: no-repeat;
+
+            img
+            {
+                vertical-align: middle;
+            }
+
+            #innerside
+            {
+                padding-left: 40px;
+                padding-right: 40px;
+                padding-bottom: 10px;
+                padding-top: 20px;
+
+                #langues
+                {
+
+                    margin-bottom: 15px;
+
+                    img
+                    {
+                        margin-left: 8px;
+                        margin-right: 8px;
+                    }
+
+                }
+
+                #tags
+                {
+
+                    margin-bottom: 20px;
+
+                    a
+                    {
+                        padding: 5px 7px 5px 7px;
+                        line-height: 30px;
+                        border-radius: 10px;
+                        background-color: #000;
+                        color: #fff;
+                        font-weight: normal;
+                    }
+
+                }
+
+                #partager
+                {
+                    text-align: center;
+                }
+
+                #lienssociaux
+                {
+                    text-align: center;
+                    margin-top: 40px;
+                }
+
+            }
+
+            // background-color: @fond;
+
+        }
+
+        // Mise en page depuis ezoe (base de eZ)
+
+        .object-right
+        {
+            float: right;
+            margin: 0.5em 0em 0.5em 0.5em;
+        }
+
+        .object-left
+        {
+            float: left;
+            margin: 0.5em 0.5em 0.5em 0em;
+        }
+
+    }
+
+}
+
+a
+{
+
+    text-decoration: none;
+    font-weight: normal !important;
+
+    &:link:after
+    {
+        content: "" !important;
+    }
+    &:after
+    {
+        content: "" !important;
+    }
+    &:visited:after
+    {
+        content: "" !important;
+    }
+
+}
+
