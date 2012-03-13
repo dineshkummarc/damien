@@ -9,46 +9,39 @@
 
     <message>
         <source>multimedia developer</source>
-        <translation>développeur multimédia</translation>
+        <translation>plurmedian programisto</translation>
     </message>
 
     <!-- Right menu (side) -->
 
     <message>
         <source>Languages</source>
-        <translation>Langues</translation>
+        <translation>Lingvoj</translation>
     </message>
 
     <message>
         <source>Tags</source>
-        <translation>Tags</translation>
+        <translation>Etikedoj</translation>
     </message>
 
     <message>
         <source>Share</source>
-        <translation>Partager</translation>
+        <translation>Partigi</translation>
     </message>
 
     <message>
         <source>Contact me by e-mail.</source>
-        <translation>Me contacter par mail.</translation>
+        <translation>Kontaktu min per e-poŝto.</translation>
     </message>
 
     <message>
         <source>Follow me on Twitter.</source>
-        <translation>Me suivre sur Twitter.</translation>
+        <translation>Sekvu min en Twitter.</translation>
     </message>
 
     <message>
         <source>Get the RSS feed.</source>
-        <translation>M'abonner au flux RSS.</translation>
-    </message>
-
-    <!-- GISTS -->
-
-    <message>
-        <source>Those data are displayed in live from Github.</source>
-        <translation>Ces données sont affichés en directe depuis Github.</translation>
+        <translation>Preni la RSS.</translation>
     </message>
 
 </context>

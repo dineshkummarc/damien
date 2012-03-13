@@ -2,14 +2,16 @@
 
 <h1>{$node.name}</h1>
 
-{def $gists = fetch(gists, list)}
+{def $gists = fetch(gist, list)}
 
-<ul>
+<ul class="gists">
 {foreach $gists as $gist}
     <li>
-        {$gist.description} - {$gist.id}
+        <a href={concat('gist/show/',$gist.id)|ezurl}>{$gist.description}</a>
     </li>
 {/foreach}
 </ul>
 
 {undef $gists}
+
+{'Those data are displayed in live from Github.'|i18n('damien')}

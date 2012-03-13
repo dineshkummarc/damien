@@ -11,3 +11,4 @@
     {/foreach}
 </ul>
 {undef $menu_haut}
+<div class="clear"></div>

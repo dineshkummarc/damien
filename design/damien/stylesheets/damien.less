@@ -1,3 +1,13 @@
+/*
+ * INFORMATIONS UTILES
+ * ===================
+ *
+ * J'utilsie actuelement prefixfree de Lea Verou pour éviter de devoir
+ * mettre tous les -moz-, -webkit-, ...
+ * http://leaverou.github.com/prefixfree/
+ *
+ */
+
 // FONTS ////////////////////////////////////////////////////////////
 
 @font-face {
@@ -43,23 +53,15 @@
 
 .shadow(@taille: 5px)
 {
-
     @taille2 = @taille / 2;
-
-    -webkit-box-shadow: 0px 2px @taille @taille2 rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0px 2px @taille @taille2 rgba(0, 0, 0, 0.5);
     box-shadow: 0px 2px @taille @taille2 rgba(0, 0, 0, 0.5);     
 }
 
 .colonnage(@nombre: 2)
 {
     text-align: justify;
-    columns: @nombre;
-    column-gap: 2em;
     -moz-columns: @nombre;
     -moz-column-gap: 2em;
-    -webkit-columns: @nombre;
-    -webkit-column-gap: 2em;
 }
 
 // CSS //////////////////////////////////////////////////////////////
@@ -142,20 +144,14 @@ html
             height: 1px;
         }
 
-        h1, h2
-        {
-            font-family: ThatsFontFolksItalic;
-            font-weight: normal;
-        }
-
-        h2, h3, h4, h5
+        h1, h2, h3, h4, h5
         {
             font-weight: normal;
         }
 
         h1
         {
-            font-size: 4em;
+            font-size: 3em;
             &:first-letter
             {
                 font-size: 1.1em;
@@ -193,27 +189,30 @@ html
 
             background-color: @bg-menu;
             color: @fg-menu;
+            padding-bottom: 20px;
 
             ul
             {
+
                 li
                 {
 
-                    display: inline;
+                    display: block;
+                    float: left;
 
                     a
                     {
                         
                         background-color: @bg-menu;
-                        border-radius: 0px;
+                        border-radius: 0px 15px 0px 15px;
                         padding: 10px;
                         margin-right: 10px;
+                        transition: background-color 1s linear;
+                        letter-spacing: 4px;
 
                         &:hover
                         {
-                            -moz-transition: background-color 0.2s ease-in-out;
-                            //-moz-transition: color 0.2s ease-in-out;
-                            //-moz-transition: border-radius 0.2s ease-in-out;
+                            transition: background-color 0.5s linear;
                             border-radius: 0px 15px 0px 15px;
                             background-color: @fg-lien;
                             color: #fff;
@@ -229,6 +228,7 @@ html
                     }
 
                 }
+
             }
 
         }
@@ -239,6 +239,36 @@ html
             background-color: @bg-texte;
             line-height: 1.7em;
             padding: 20px;
+
+            span.blockcode
+            {
+                font-family: "Courier New", Courier, monospace;
+                background-color: #fbfbfb;
+                padding: 1px;
+                border: 1px #f1f1f1 solid;
+                border-radius: 5px;
+            }
+
+            table
+            {
+
+                tr.bglight td
+                {
+                    background-color: #ededed;
+                }
+
+                tr.bgdark td
+                {
+                    background-color: #d4d4d4;
+                }
+
+                th
+                {
+                    background-color: #000;
+                    color: #fff;
+                }
+
+            }
 
             .colonnes
             {
@@ -272,6 +302,12 @@ html
             background-position: left bottom;
             background-repeat: no-repeat;
 
+            h2
+            {
+                font-family: ThatsFontFolksItalic;
+                font-weight: normal;
+            }
+
             img
             {
                 vertical-align: middle;
@@ -300,11 +336,15 @@ html
                 #tags
                 {
 
-                    margin-bottom: 20px;
+                    margin-bottom: 40px;
 
                     a
                     {
-                        padding: 5px 7px 5px 7px;
+                        display: block;
+                        float: left;
+                        padding: 0px 8px 0px 8px;
+                        margin-bottom: 8px;
+                        margin-right: 8px;
                         line-height: 30px;
                         border-radius: 10px;
                         background-color: #000;
@@ -326,8 +366,6 @@ html
                 }
 
             }
-
-            // background-color: @fond;
 
         }
 

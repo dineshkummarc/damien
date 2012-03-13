@@ -8,8 +8,26 @@
         <meta charset="UTF-8">
         <title>MARTIN Damien</title>
 
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        {def $meta = metadata( $module_result.node_id ) }
+        {if $meta}
+            {if $meta.title}
+                <title>{$meta.title|wash}</title>
+            {/if}
+            {if $meta.keywords}
+	            <meta name="keywords" content="{$meta.keywords|implode(',')|wash}" />
+            {/if}
+            {if $meta.description}
+                <meta name="description" content="{$meta.description|wash}" />
+            {/if}
+        {else} 
+            <title>{$node.name} - {$site_title}</title>
+            {foreach $site.meta as $key => $item }
+                <meta name="{$key|wash}" content="{$item|wash}" />
+            {/foreach}
+        {/if}
+
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
         <link rel="stylesheet" href={"stylesheets/blueprint/screen.css"|ezdesign} />
         <link rel="stylesheet" href={"stylesheets/blueprint/print.css"|ezdesign} />
@@ -19,6 +37,7 @@
 
         {array("damien.less")|ezless_add()}
         {ezless()}
+        <script type="text/javascript" src={"javascript/prefixfree.min.js"|ezdesign}></script>
 
         <script type="text/javascript" src={"javascript/jquery-1.7.1.min.js"|ezdesign}></script>
         <script type="text/javascript" src={"javascript/jquery.qtip.min.js"|ezdesign}></script>
@@ -48,6 +67,13 @@
 
             <article>
                 <div class="span-16 last" id="article">
+
+                    <nav>
+                        <div id="ariane">
+                            {include uri="design:page_toppath.tpl"}
+                        </div>
+                    </nav>
+
 
                     {$module_result.content}
 

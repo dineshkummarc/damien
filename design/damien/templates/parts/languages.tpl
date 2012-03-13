@@ -13,7 +13,7 @@
             {case match='eng-GB'}
                 {set $en = true()}
                 {/case}
-            {case match='jap-JP'}
+            {case match='jpn-JP'}
                 {set $jp = true()}
                 {/case}
             {case match='epo-EO'}
@@ -39,7 +39,7 @@
     {/if}
 
     {if $jp}
-        <a href={concat('switchlanguage/to/jap/', $requested_uri_string)|ezurl}>
+        <a href={concat('switchlanguage/to/jpn/', $requested_uri_string)|ezurl}>
             <img src={"flags/jp-on.png"|ezimage} alt="日本語でこのページを表示する。" />
         </a>
     {else}

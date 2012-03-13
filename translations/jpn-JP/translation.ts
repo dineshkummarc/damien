@@ -9,46 +9,39 @@
 
     <message>
         <source>multimedia developer</source>
-        <translation>développeur multimédia</translation>
+        <translation>マルチメディア開発者</translation>
     </message>
 
     <!-- Right menu (side) -->
 
     <message>
         <source>Languages</source>
-        <translation>Langues</translation>
+        <translation>言語</translation>
     </message>
 
     <message>
         <source>Tags</source>
-        <translation>Tags</translation>
+        <translation>タグ</translation>
     </message>
 
     <message>
         <source>Share</source>
-        <translation>Partager</translation>
+        <translation>シェア</translation>
     </message>
 
     <message>
         <source>Contact me by e-mail.</source>
-        <translation>Me contacter par mail.</translation>
+        <translation>電子メールによって私に連絡してください。</translation>
     </message>
 
     <message>
         <source>Follow me on Twitter.</source>
-        <translation>Me suivre sur Twitter.</translation>
+        <translation>Twitter上で私に従っ。</translation>
     </message>
 
     <message>
         <source>Get the RSS feed.</source>
-        <translation>M'abonner au flux RSS.</translation>
-    </message>
-
-    <!-- GISTS -->
-
-    <message>
-        <source>Those data are displayed in live from Github.</source>
-        <translation>Ces données sont affichés en directe depuis Github.</translation>
+        <translation>RSSフィードを取得します。</translation>
     </message>
 
 </context>
