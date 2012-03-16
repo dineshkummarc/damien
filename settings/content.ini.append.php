@@ -13,9 +13,9 @@ AvailableCustomTags[]=citation
 AvailableCustomTags[]=blockcode
 
 IsInline[separation]=true
-IsInline[columns]=true
-IsInline[citation]=true
-IsInline[columns_lettrine]=true
+IsInline[columns]=false
+IsInline[citation]=false
+IsInline[columns_lettrine]=false
 IsInline[blockcode]=true
 
 */ ?>

@@ -1,1 +1,1 @@
-<span class="blockcode">{$content}</span>
+<code>{$content}</code>

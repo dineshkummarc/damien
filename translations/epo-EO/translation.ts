@@ -44,5 +44,12 @@
         <translation>Preni la RSS.</translation>
     </message>
 
+    <!-- TUTORIALS -->
+
+    <message>
+        <source>Table of contents</source>
+        <translation>Enhavotabelo</translation>
+    </message>
+
 </context>
 </TS>

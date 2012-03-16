@@ -6,9 +6,8 @@
     <head>
 
         <meta charset="UTF-8">
-        <title>MARTIN Damien</title>
 
-        {def $meta = metadata( $module_result.node_id ) }
+        {def $meta = metadata($module_result.node_id)}
         {if $meta}
             {if $meta.title}
                 <title>{$meta.title|wash}</title>
@@ -25,22 +24,20 @@
                 <meta name="{$key|wash}" content="{$item|wash}" />
             {/foreach}
         {/if}
+        {undef $meta}
 
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href={"favicon.ico"|ezroot} type="image/x-icon">
+        <link rel="icon" href={"favicon.ico"|ezroot} type="image/x-icon">
 
-        <link rel="stylesheet" href={"stylesheets/blueprint/screen.css"|ezdesign} />
-        <link rel="stylesheet" href={"stylesheets/blueprint/print.css"|ezdesign} />
-        <!--[if IE]><link rel="stylesheet" href={"stylesheets/blueprint/ie.css"|ezdesign} /><![endif]-->
-
+        <link rel="stylesheet" href={"stylesheets/bootstrap.min.css"|ezdesign} />
         <link rel="stylesheet" href={"stylesheets/jquery.qtip.min.css"|ezdesign} />
-
         {array("damien.less")|ezless_add()}
         {ezless()}
         <script type="text/javascript" src={"javascript/prefixfree.min.js"|ezdesign}></script>
 
-        <script type="text/javascript" src={"javascript/jquery-1.7.1.min.js"|ezdesign}></script>
+        <script type="text/javascript" src={"javascript/jquery.min.js"|ezdesign}></script>
         <script type="text/javascript" src={"javascript/jquery.qtip.min.js"|ezdesign}></script>
+        <script type="text/javascript" src={"javascript/bootstrap.min.js"|ezdesign}></script>
 
         <script type="text/javascript" src={"javascript/action.js"|ezdesign}></script>
 
@@ -60,20 +57,20 @@
             </header>
 
             <nav>
-                <div id="menu" class="span-24 last">
+                <div id="menu">
                     {include uri='design:parts/menu_haut.tpl'}
                 </div>
-            </nav> 
+            </nav>
 
+            <div class="row">
             <article>
-                <div class="span-16 last" id="article">
+                <div class="span8 last" id="article">
 
                     <nav>
                         <div id="ariane">
-                            {include uri="design:page_toppath.tpl"}
+                            {include uri='design:parts/breadcrumb.tpl' path=$node.path_array}
                         </div>
                     </nav>
-
 
                     {$module_result.content}
 
@@ -81,7 +78,7 @@
             </article>
 
             <aside>
-                <div class="span-7 last" id="side">
+                <div class="span3 last" id="side">
 
                     <img src={"angle-haut-side.png"|ezimage} alt="" />
 
@@ -125,11 +122,13 @@
 
                 </div>
             </aside>
+            </div>
 
- 
+            <div class="row">
             <footer>
-                <div id="footer"></div>
+                <div id="footer" class="span12"></div>
             </footer>
+            </div>
 
         </div>
 

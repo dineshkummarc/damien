@@ -12,6 +12,11 @@
         <translation>développeur multimédia</translation>
     </message>
 
+    <message>
+        <source>Search</source>
+        <translation>Rechercher</translation>
+    </message>
+
     <!-- Right menu (side) -->
 
     <message>
@@ -44,11 +49,23 @@
         <translation>M'abonner au flux RSS.</translation>
     </message>
 
+    <!-- TUTORIALS -->
+
+    <message>
+        <source>Table of contents</source>
+        <translation>Table des matières</translation>
+    </message>
+
     <!-- GISTS -->
 
     <message>
         <source>Those data are displayed in live from Github.</source>
         <translation>Ces données sont affichés en directe depuis Github.</translation>
+    </message>
+
+    <message>
+        <source>Display on Github</source>
+        <translation>Voir sur Github</translation>
     </message>
 
 </context>

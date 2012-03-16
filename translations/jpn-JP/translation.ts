@@ -44,5 +44,12 @@
         <translation>RSSフィードを取得します。</translation>
     </message>
 
+    <!-- TUTORIALS -->
+
+    <message>
+        <source>Table of contents</source>
+        <translation>目次</translation>
+    </message>
+
 </context>
 </TS>

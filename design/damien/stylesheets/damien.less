@@ -77,6 +77,11 @@ html
     
     color: @fg-texte;
 
+    body
+    {
+        background-color: transparent;
+    }
+
     #main
     {
 
@@ -119,7 +124,7 @@ html
             color: @fg-texte;
         }
 
-        .lettrine:first-letter
+        .lettrine p:first-letter
         {
             float: left;
             margin: 2px;
@@ -144,42 +149,24 @@ html
             height: 1px;
         }
 
-        h1, h2, h3, h4, h5
-        {
-            font-weight: normal;
-        }
-
-        h1
-        {
-            font-size: 3em;
-            &:first-letter
-            {
-                font-size: 1.1em;
-            }
-        }
-
-        h2
-        {
-            font-size: 2em;
-        }
-
         #header
         {
 
             background-color: @bg-header;
             color: @fg-header;
             font-family: ThatsFontFolksItalic;
-            padding: 10px 30px 20px 0px;
+            padding: 30px 57px 0px 0px;
             font-size: 30px;
             text-align: right;
             text-shadow: 0px 0px 6px rgba(255, 145, 207, 1);
+            height: 60px;
+            line-height: auto;
 
             span
             {
                 display: block;
                 font-family: helvetica;
                 font-size: 16px;
-                line-height: 0px;
             }
 
         }
@@ -187,48 +174,36 @@ html
         #menu
         {
 
-            background-color: @bg-menu;
-            color: @fg-menu;
-            padding-bottom: 20px;
+            .navbar
+            {
+                margin-bottom: 0px;
+            }
 
-            ul
+            .navbar-inner
+            {
+                border-radius: 0px;
+            }
+
+            li.active a
+            {
+                color: #ffffff;
+            }
+
+            a
             {
 
-                li
+                color: #999999;
+
+                &:hover
                 {
-
-                    display: block;
-                    float: left;
-
-                    a
-                    {
-                        
-                        background-color: @bg-menu;
-                        border-radius: 0px 15px 0px 15px;
-                        padding: 10px;
-                        margin-right: 10px;
-                        transition: background-color 1s linear;
-                        letter-spacing: 4px;
-
-                        &:hover
-                        {
-                            transition: background-color 0.5s linear;
-                            border-radius: 0px 15px 0px 15px;
-                            background-color: @fg-lien;
-                            color: #fff;
-                        }
-
-                        &.inside
-                        {
-                            border-radius: 0px 15px 0px 15px;
-                            background-color: #333333;
-                            color: #fff;
-                        }
-
-                    }
-
+                    color: #ffffff;
                 }
 
+            }
+
+            .search-query
+            {
+                margin-right: 5px;
             }
 
         }
@@ -248,7 +223,7 @@ html
                 border: 1px #f1f1f1 solid;
                 border-radius: 5px;
             }
-
+/*
             table
             {
 
@@ -269,13 +244,13 @@ html
                 }
 
             }
-
+*/
             .colonnes
             {
                 .colonnage;
             }
 
-            .citation
+            .citation p
             {
                 display: block;
                 font-family: ThatsFontFolksItalic;
@@ -301,6 +276,7 @@ html
             background-image: url(../images/side-haut.png);
             background-position: left bottom;
             background-repeat: no-repeat;
+            margin-left: 0px;
 
             h2
             {
@@ -408,3 +384,30 @@ a
 
 }
 
+// BOOTSTRAP OVERRIDES
+
+.hero-unit
+{
+    h2
+    {
+        font-size: 60px;
+        letter-spacing: -1px;
+        line-height: 1;
+    }
+}
+
+.btn
+{
+    color: #fff !important;
+}
+
+
+.modal
+{
+    display: none;
+}
+
+.clear
+{
+    clear: both;
+}
