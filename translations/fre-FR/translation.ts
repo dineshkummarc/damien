@@ -68,5 +68,12 @@
         <translation>Voir sur Github</translation>
     </message>
 
+    <!-- THUMBNAILS -->
+
+    <message>
+        <source>See</source>
+        <translation>Voir</translation>
+    </message>
+
 </context>
 </TS>

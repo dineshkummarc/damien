@@ -223,28 +223,7 @@ html
                 border: 1px #f1f1f1 solid;
                 border-radius: 5px;
             }
-/*
-            table
-            {
 
-                tr.bglight td
-                {
-                    background-color: #ededed;
-                }
-
-                tr.bgdark td
-                {
-                    background-color: #d4d4d4;
-                }
-
-                th
-                {
-                    background-color: #000;
-                    color: #fff;
-                }
-
-            }
-*/
             .colonnes
             {
                 .colonnage;
@@ -267,6 +246,18 @@ html
                 background-size: auto;
             }
 
+            .thumbnail
+            {
+                .caption
+                {
+                    .inside
+                    {
+                        display: block;
+                        height: 100px;
+                    }
+                }
+            }
+
         }
 
         #side
@@ -282,6 +273,7 @@ html
             {
                 font-family: ThatsFontFolksItalic;
                 font-weight: normal;
+                padding-bottom: 15px;
             }
 
             img
@@ -345,6 +337,13 @@ html
 
         }
 
+        #footer
+        {
+
+            background-color: #000;
+
+        }
+
         // Mise en page depuis ezoe (base de eZ)
 
         .object-right
@@ -405,6 +404,18 @@ a
 .modal
 {
     display: none;
+}
+
+.search-query
+{
+
+    transition: background-color 2s linear;
+    
+    &:focus
+    {
+        transition: background-color 0.5s linear;
+    }
+
 }
 
 .clear

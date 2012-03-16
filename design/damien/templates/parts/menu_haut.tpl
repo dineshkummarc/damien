@@ -15,8 +15,8 @@
                 {/foreach}
             </ul>
 
-            <form class="navbar-search pull-right">
-                <input type="text" class="search-query" placeholder="{'Search'|i18n('damien')}" />
+            <form action={"/content/search"|ezurl} class="navbar-search pull-right">
+                <input name="SearchText" type="text" class="search-query" placeholder="{'Search'|i18n('damien')}" />
             </form>
 
         </div>

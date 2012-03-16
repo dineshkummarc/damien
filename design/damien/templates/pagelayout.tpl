@@ -19,7 +19,7 @@
                 <meta name="description" content="{$meta.description|wash}" />
             {/if}
         {else} 
-            <title>{$node.name} - {$site_title}</title>
+            <title>{$node.name} - MARTIN-Damien.fr</title>
             {foreach $site.meta as $key => $item }
                 <meta name="{$key|wash}" content="{$item|wash}" />
             {/foreach}
@@ -38,6 +38,8 @@
         <script type="text/javascript" src={"javascript/jquery.min.js"|ezdesign}></script>
         <script type="text/javascript" src={"javascript/jquery.qtip.min.js"|ezdesign}></script>
         <script type="text/javascript" src={"javascript/bootstrap.min.js"|ezdesign}></script>
+
+        <script type="text/javascript" src={"javascript/jquery.dotdotdot.min.js"|ezdesign}></script>
 
         <script type="text/javascript" src={"javascript/action.js"|ezdesign}></script>
 
@@ -106,7 +108,9 @@
 
                         <div id="lienssociaux">
 
-                            <img src={"mail.png"|ezimage} alt="{'Contact me by e-mail.'|i18n('damien')}" />
+                            <a href={"content/view/full/81"|ezurl}>
+                                <img src={"mail.png"|ezimage} alt="{'Contact me by e-mail.'|i18n('damien')}" />
+                            </a>
 
                             <a href="http://www.twitter.com/#/lepereporcher" target="_blank">
                                 <img src={"twitter.png"|ezimage} alt="{'Follow me on Twitter.'|i18n('damien')}" />
@@ -124,11 +128,27 @@
             </aside>
             </div>
 
-            <div class="row">
             <footer>
-                <div id="footer" class="span12"></div>
+                <div id="footer">
+
+                    <div class="row">
+
+                        <div class="span4">
+
+                            <h3>Links</h3>
+
+                        </div>
+
+                        <div class="span8">
+
+                            <h3>About the author</h3>
+
+                        </div>
+
+                    </div>
+
+                </div>
             </footer>
-            </div>
 
         </div>
 

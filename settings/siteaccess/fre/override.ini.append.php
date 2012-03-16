@@ -1,3 +1,9 @@
+[full_accueil]
+Source=node/view/full.tpl
+MatchFile=full/accueil.tpl
+Subdir=templates
+Match[node]=2
+
 [full_article]
 Source=node/view/full.tpl
 MatchFile=full/article.tpl
