@@ -75,5 +75,39 @@
         <translation>Voir</translation>
     </message>
 
+    <!-- CONTACT -->
+
+    <message>
+        <source>Send</source>
+        <translation>Envoyer</translation>
+    </message>
+
+    <message>
+        <source>Thanks</source>
+        <translation>Merci</translation>
+    </message>
+
+    <message>
+        <source>Your message has been sent.</source>
+        <translation>Votre message a été envoyé.</translation>
+    </message>
+
+    <!-- FOOTER -->
+
+    <message>
+        <source>Links</source>
+        <translation>Liens</translation>
+    </message>
+
+    <message>
+        <source>About the author</source>
+        <translation>A propos de l'auteur</translation>
+    </message>
+
+    <message>
+        <source>All the texts on this website are placed under GNU/FDL license. More informations at </source>
+        <translation>Tous les textes de ce site sont placés sous licence GNU/FDL. Plus d'informations sur </translation>
+    </message>
+
 </context>
 </TS>

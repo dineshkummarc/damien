@@ -51,7 +51,7 @@
 
                 </div>
                 <div class="modal-footer">
-                    <a href="{$gist.html_url}" target="_blank" class="btn btn-primary">{'Display on Github'|ez18n('damien')}</a>
+                    <a href="{$gist.html_url}" target="_blank" class="btn btn-primary">{"Display on Github"|i18n("damien")}</a>
                 </div>
             </div>
             {undef $gist}

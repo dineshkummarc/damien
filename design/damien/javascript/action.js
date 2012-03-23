@@ -14,7 +14,10 @@ $(document).ready(function(){
         }
     });
 
+    // Active les popover de eZBootstrap
+    $('.popover-trigger').popover();
 
+    // Active dotdotdot sur les thumbnails des articles
     $('.thumbnail .inside').dotdotdot();
 
 });

@@ -29,6 +29,8 @@
         <link rel="shortcut icon" href={"favicon.ico"|ezroot} type="image/x-icon">
         <link rel="icon" href={"favicon.ico"|ezroot} type="image/x-icon">
 
+        <link type="text/plain" rel="author" href="humans.txt" />
+
         <link rel="stylesheet" href={"stylesheets/bootstrap.min.css"|ezdesign} />
         <link rel="stylesheet" href={"stylesheets/jquery.qtip.min.css"|ezdesign} />
         {array("damien.less")|ezless_add()}
@@ -135,14 +137,41 @@
 
                         <div class="span4">
 
-                            <h3>Links</h3>
+                            <h3>{'Links'|i18n('damien')}</h3>
+
+                            <ul class="unstyled">
+                            {def $liens_node = fetch(content, node, hash(node_id, 87))}
+                            {def $liens = fetch(content, list, hash(parent_node_id, 87, sort_by, $liens_node.sort_array))}
+                            {foreach $liens as $l}
+                                <li>
+                                    <a href="{$l.data_map.location.content}">
+                                        {$l.data_map.location.data_text}
+                                    </a>
+                                </li>
+                            {/foreach}
+                            {undef $liens}
+                            {undef $liens_node}
+                            </ul>
 
                         </div>
 
-                        <div class="span8">
+                        <div class="span7">
 
-                            <h3>About the author</h3>
+                            <h3>{'About the author'|i18n('damien')}</h3>
 
+                            {def $about = fetch(content, node, hash(node_id, 66))}
+                            {attribute_view_gui attribute=$about.data_map.presentation}
+                            {undef $about}
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="span12">
+                            {'All the texts on this website are placed under GNU/FDL license. More informations at '|i18n('damien')}
+                            <a href="http://www.gnu.org/copyleft/fdl.html">http://www.gnu.org/copyleft/fdl.html</a>.
                         </div>
 
                     </div>
