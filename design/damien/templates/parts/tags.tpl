@@ -4,7 +4,7 @@
 <div id="tags">
 
     {foreach $node.data_map.tags.content.keywords as $k)}
-    <a href="">{$k}</a>
+    <a href={concat("content/keyword/",$k)|ezurl}>{$k}</a>
     {/foreach}
 
 </div>

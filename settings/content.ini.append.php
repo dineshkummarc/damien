@@ -18,4 +18,7 @@ IsInline[citation]=false
 IsInline[columns_lettrine]=false
 IsInline[blockcode]=true
 
+[link]
+CustomAttributes[]=nofollow
+
 */ ?>

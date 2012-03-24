@@ -109,5 +109,24 @@
         <translation>Tous les textes de ce site sont placés sous licence GNU/FDL. Plus d'informations sur </translation>
     </message>
 
+    <!-- KEYWORDS -->
+
+    <message>
+        <source>Keywords</source>
+        <translation>Mots clefs</translation>
+    </message>
+
+    <!-- 404 -->
+
+    <message>
+        <source>404 - Page not found</source>
+        <translation>404 - Page non trouvée</translation>
+    </message>
+
+    <message>
+        <source>Walker is on the case</source>
+        <translation>Walker est sur l'affaire</translation>
+    </message>
+
 </context>
 </TS>

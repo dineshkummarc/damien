@@ -114,7 +114,7 @@
                                 <img src={"mail.png"|ezimage} alt="{'Contact me by e-mail.'|i18n('damien')}" />
                             </a>
 
-                            <a href="http://www.twitter.com/#/lepereporcher" target="_blank">
+                            <a href="http://www.twitter.com/#/lepereporcher" target="_blank" rel="nofollow">
                                 <img src={"twitter.png"|ezimage} alt="{'Follow me on Twitter.'|i18n('damien')}" />
                             </a>
 
@@ -144,7 +144,7 @@
                             {def $liens = fetch(content, list, hash(parent_node_id, 87, sort_by, $liens_node.sort_array))}
                             {foreach $liens as $l}
                                 <li>
-                                    <a href="{$l.data_map.location.content}">
+                                    <a href="{$l.data_map.location.content}" rel="nofollow">
                                         {$l.data_map.location.data_text}
                                     </a>
                                 </li>
